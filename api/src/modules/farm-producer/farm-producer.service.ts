@@ -30,11 +30,11 @@ export class FarmProducerService {
     }
   }
 
-  async findAll(query: FindAllFarmProducerDto) {
+  async findAll({ limit = 10, offset = 0, name }: FindAllFarmProducerDto) {
     try {
       const where: Prisma.FarmProducerWhereInput = {
         name: {
-          contains: query.name,
+          contains: name,
           mode: 'insensitive',
         },
       };
@@ -43,8 +43,8 @@ export class FarmProducerService {
         orderBy: {
           createdAt: 'desc',
         },
-        take: query.limit,
-        skip: query.offset,
+        take: Number(limit),
+        skip: Number(offset),
       });
       const totalCount = await this.prisma.farmProducer.count({
         where,
