@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  brain-db:
+    container_name: brain-db
+    image: postgres:12.9
+    ports:
+      - '5432:5432'
+    networks:
+      - base_network
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: brain_db
+
+  brain-api:
+    container_name: brain-api
+    image: 'node:18.17.0'
+    networks:
+      - base_network
+    ports:
+      - '3000:3000'
+    command: sh -c "yarn start:dev"
+    depends_on:
+      - brain-db
+    working_dir: /app
+    volumes:
+      - ./api:/app
+    environment:
+      DATABASE_URL: postgresql://root:root@brain-db:5432/brain_db
+
+  brain-front:
+    container_name: brain-front
+    image: 'node:18.17.0'
+    networks:
+      - base_network
+    ports:
+      - '80:3000'
+    command: sh -c "yarn dev"
+    working_dir: /app
+    volumes:
+      - ./front:/app
+    # env_file: .env
+
+networks:
+  base_network:
+
+volumes:
+  db-data:

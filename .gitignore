@@ -1,0 +1,4 @@
+# api compiled output
+api/dist
+api/node_modules
+
