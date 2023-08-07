@@ -78,7 +78,7 @@ Este projeto esta sobe licença MIT 📝
 
 
 <h3 align="center">
-Feito com 💜 por <a href="https://www.linkedin.com/in/natameira/">Natan Meira</a>
+Feito com 💜 por <a href="https://www.linkedin.com/in/natanmeira/">Natan Meira</a>
 </h3>
 <!-- Website Links -->
 
