@@ -15,7 +15,6 @@ import { useFormik } from 'formik';
 import { brazilianStates } from './helper';
 import { PlantedCropsEnum } from '@/domain/enum';
 import { Translate } from '@/utils/lang';
-import { useEffect } from 'react';
 
 export type FarmProducerFormProps = {
   data?: FarmProducer;

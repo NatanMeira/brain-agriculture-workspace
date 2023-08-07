@@ -26,7 +26,7 @@ export default function FarmProducerList() {
 
   useEffect(() => {
     refetch();
-  }, [paginationModel.page]);
+  }, [paginationModel.page, refetch]);
 
   async function handleDelete(id: string) {
     await farmProducerService.delete(id);

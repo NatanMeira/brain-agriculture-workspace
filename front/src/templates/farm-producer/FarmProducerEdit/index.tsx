@@ -2,7 +2,6 @@ import { CircularProgress, Container, Typography } from '@mui/material';
 import { BaseTemplate } from '../../Base';
 import { FarmProducer } from '@/domain/entity';
 import { FarmProducerForm } from '@/components/farm-producer/Form';
-import { UpdateFarmProducerDto } from '@/services/farm-producer/dto';
 
 type FarmProducerEditTemplateProps = {
   data: FarmProducer;
