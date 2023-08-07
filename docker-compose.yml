@@ -22,7 +22,7 @@ services:
       - base_network
     ports:
       - '3000:3000'
-    command: sh -c "yarn start:dev"
+    command: sh -c "yarn install && yarn migration:run && yarn seed:run && yarn start:dev"
     depends_on:
       - brain-db
     working_dir: /app
@@ -38,7 +38,7 @@ services:
       - base_network
     ports:
       - '80:3000'
-    command: sh -c "yarn dev"
+    command: sh -c "yarn install && yarn dev"
     working_dir: /app
     volumes:
       - ./front:/app
