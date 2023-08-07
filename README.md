@@ -14,6 +14,8 @@
 
 Brain Agriculture é um projeto desenvolvido para fins de praticar conhecimentos técnicos de programação, utilizando as tecnologias de desenvolvimento de ponta, como os frameworks **[NestJs][nestjs]** e **[NextJs][nextjs]**. Esta plataforma é uma simulação de uma aplicação real no setor agrícola, concetrado na implementação de cadastro, edição, exclusão e visualização dos dados de um produtor rural, enquanto oferece um dashboard inteligente que exibe métricas valiosas sobre as fazendas e suas áreas.
 
+Para executar esta aplicação é necessário docker e docker-compose.
+
 </h3>
 
 # 🎨 Layout
@@ -80,19 +82,6 @@ Feito com 💜 por <a href="https://www.linkedin.com/in/natameira/">Natan Meira<
 </h3>
 <!-- Website Links -->
 
-[golang]: https://go.dev/
-[bootstrap]: https://getbootstrap.com/
-[postgresql]: https://www.postgresql.org/
-[gin]: https://gin-gonic.com/docs/
-[gorm]: https://gorm.io/docs/
-
-<!-- Badges -->
-
-[BADGE_NESTJS]: https://img.shields.io/badge/NestJs-v10.0.0-FF7777
-[BADGE_POSTGRESQL]:https://img.shields.io/badge/PostgreSQL-v12.9-97B8CF
-[BADGE_NEXT]: https://img.shields.io/badge/NextJs-v13.4.13-000000
-
-
 [reactjs]: https://react.dev/
 [nextjs]: https://nextjs.org/
 [materialui]: https://mui.com/
@@ -103,3 +92,10 @@ Feito com 💜 por <a href="https://www.linkedin.com/in/natameira/">Natan Meira<
 [nestjs]: https://docs.nestjs.com/
 [prismaorm]: https://www.prisma.io/
 [postgres]: https://www.postgresql.org/
+
+<!-- Badges -->
+
+[BADGE_NESTJS]: https://img.shields.io/badge/NestJs-v10.0.0-FF7777
+[BADGE_POSTGRESQL]:https://img.shields.io/badge/PostgreSQL-v12.9-97B8CF
+[BADGE_NEXT]: https://img.shields.io/badge/NextJs-v13.4.13-000000
+
