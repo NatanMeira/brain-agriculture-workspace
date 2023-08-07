@@ -67,7 +67,7 @@ $ git clone https://github.com/NatanMeira/brain-agriculture-workspace.git
 ## 📦 Execute a aplicação via docker-compose
 
 ```bash
-# Instale as Dependências
+# Execute via docker-compose
 $ docker-compose up
 ```
 Após todos os containers inicializarem corretamente acesse a aplicação em http://localhost
