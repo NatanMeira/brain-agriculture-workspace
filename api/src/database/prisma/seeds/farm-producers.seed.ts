@@ -25,7 +25,7 @@ export async function seedFarmProducers(prisma: PrismaClient) {
 
     await prisma.farmProducer.create({
       data: {
-        cpfOrCnpj: fakerBr.cpfcnpj(),
+        cpfOrCnpj: fakerBr.cnpj(),
         name: fakerBr.pessoa().nome,
         farmName: fakerBr.empresa().nome,
         city: 'São Paulo',

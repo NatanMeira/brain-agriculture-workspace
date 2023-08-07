@@ -17,6 +17,7 @@ export class DashboardService {
         vegetationAreaInHectares: true,
       },
     });
+
     const farmsByState = await this.prisma.farmProducer.groupBy({
       by: ['state'],
       _count: {
@@ -40,7 +41,7 @@ export class DashboardService {
       totalFarmsAreaInHectares: totalFarmsArea._sum.totalAreaInHectares || 0,
       totalArableAreaInHectares: totalFarmsArea._sum.arableAreaInHectares || 0,
       totalVegetationAreaInHectares:
-        totalFarmsArea._sum.arableAreaInHectares || 0,
+        totalFarmsArea._sum.vegetationAreaInHectares || 0,
       farmsByState:
         farmsByState.map((farm) => ({
           name: farm.state,

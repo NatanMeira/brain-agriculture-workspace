@@ -42,7 +42,8 @@ services:
     working_dir: /app
     volumes:
       - ./front:/app
-    # env_file: .env
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:3000
 
 networks:
   base_network:
